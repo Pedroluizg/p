@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family= Krona+One & family= Montserrat & display=swap') ; /* importação de font do google*/
+
+:root{
+    --cor-letra:#D1D3ED;
+    --cor-fundo:#000000;
+    --cor-destaque:#66493D;
+    --cor-detalhe:#272727;
+    --cor-conjunta:#324732;
+}
+
+* {
+    margin: 0; /* reset css pra não dar biziu nos navegadores */
+    padding: 0;/*  mesma coisa*/
+}
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;/* configuração pra tela adaptar em qualquer aparelho*/
+    box-sizing: border-box; /*imagem não sair da tela*/
+    background-color:var(--cor-fundo);/* cor do fundo da tela*/
+    color:var(--cor-letra);/* cor da letra*/
+}
+.cabecalho{
+    padding: 5% 0% 0% 10%;
+}
+.cabecalho2{
+    display: flex;
+    gap: 80px;
+}
+.home{
+    color:var(--cor-destaque);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 5px /*grossura da linha*/ solid #263326;
+    width: 300px;/*tamanho da borda */
+    text-align: center;/*texto centralizado*/
+    border-radius: 19px;/*borda arrendondada*/
+    padding: 10px 0;/*distancia da borda com o texto*/
+}
+.home:hover{
+background-color: var(--cor-detalhe);
+}
+.titulo-forte{
+    color:var(--cor-destaque) /*cor da primeira class, pra destacar no texto.. ex: strong e tal*/
+}
+.a1{
+    margin: 0% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.a22 {
+    width: auto; /* Alterado para 60% para deixar espaço para a imagem */
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    gap: 50px;   
+}
+
+.a2 {
+    width: 50%;
+    display: flex; /*o display flex, segue as configurações dos flexbox que vai gerar os espacamentos*/
+    flex-direction:column;
+    text-align: center;/*alinhamento do texto */
+    gap: 50px; /*espacamento entre textos*/
+}
+
+.a3{
+    margin: 35px;
+    color:var(--cor-conjunta);
+    font-size: 3.125rem;
+    font-family: "krona one",sans-serif;
+}
+
+.a42{
+    font-family: Arial, Helvetica, sans-serif; /* escolha da fonte*/
+    font-size: 2.25rem; /*tamanho da fonte, o rem medida pra se adaptar aos navegadores valor em px dividido por 16*/
+    margin: 0% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align:left;
+}
+.subtitulo {
+    font-family: "krona one", sans-serif;
+    font-size: 1.5625rem;/*font-size é sobre o tamanho da fonte*/
+}
+.botao{
+    display: flex;
+    align-items: center; /* centralizar na pagina os botões*/
+    gap: 35px; /* distancia entre os botões*/
+    flex-direction: column; /* direcão dos botões em coluna*/
+    justify-content: space-between;
+}
+.estilo_botao{/* estilização de botão*/
+   /* background-color:rgb(233, 137, 11) ;/*cor do botão*/
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;/*tamanho da borda */
+    text-align: center;/*texto centralizado*/
+    border-radius: 19px;/*borda arrendondada*/
+    font-size: 2.1875rem;/*tamanho da fonte*/
+    padding: 15px 0;/*distancia da borda com o texto*/
+    text-decoration: none;/*tira sublinhado do link*/
+    color:var(--cor-destaque);/*cor da letra*/
+    font-family: sans-serif;
+    font-weight: 600;
+    border: 5px /*grossura da linha*/ solid #263326;
+   /* border-radius: 8px;  ( deixaria as bordas dos botões menos arrendondada*/
+    
+
+}
+.estilo_botao:hover{
+    background-color:var(--cor-detalhe);
+}
+.imagem_1{
+    width: 50%;
+}
+/*
+.rodape {
+    margin: 50px;
+    color: #000000;
+    background-color: #263326;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    width: 100%;
+   }*/
+   .rodape {
+    background-color:var(--cor-conjunta);
+    color:var(--cor-letra); /* Mudei a cor do texto para torná-lo mais visível no fundo escuro */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 35px;
+    padding: 15px 0; /* Adicionei preenchimento para espaçamento interno */
+    width: 100%;
+    position: absolute; /* Alterei de absolute para fixed */
+    bottom: auto; /* Coloquei o footer na parte inferior da página */
+    left: 0;
+}
+
+@media (max-width:1200px){
+
+    .a1{
+    flex-direction: column-reverse;
+    padding: 5%;
+    }
+    .cabecalho{
+    padding: auto;
+    }
+    .cabecalho2{
+        justify-content: center;
+    }
+    .imagem_1{
+        width:auto;
+    }
+    .a22 {
+        width: auto; /* Alterado para 60% para deixar espaço para a imagem */
+        display: flex;
+        flex-direction:column-reverse;
+        text-align: center;
+        gap: 50px;   
+    }
+}
